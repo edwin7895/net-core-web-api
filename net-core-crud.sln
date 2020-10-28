@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-core-crud.Api", "net-core-crud.Api\net-core-crud.Api.csproj", "{E0852DF0-9B06-42CC-BABC-FE347B50EA3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi.Api", "webApi.Api\webApi.Api.csproj", "{E0852DF0-9B06-42CC-BABC-FE347B50EA3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-core-crud.Core", "net-core-crud.Core\net-core-crud.Core.csproj", "{DE57CE2B-34CD-4591-89A7-F81610011577}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi.Core", "webApi.Core\webApi.Core.csproj", "{DE57CE2B-34CD-4591-89A7-F81610011577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-core-crud.Services", "net-core-crud.Services\net-core-crud.Services.csproj", "{E52644CD-BFEE-4D3C-96C2-FE46EB1FEFA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi.Services", "webApi.Services\webApi.Services.csproj", "{E52644CD-BFEE-4D3C-96C2-FE46EB1FEFA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net-core-crud.Data", "net-core-crud.Data\net-core-crud.Data.csproj", "{C592F623-8429-4A88-9286-4E7C6BC45881}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi.Data", "webApi.Data\webApi.Data.csproj", "{C592F623-8429-4A88-9286-4E7C6BC45881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

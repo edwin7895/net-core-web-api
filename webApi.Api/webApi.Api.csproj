@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\webApi.Core\webApi.Core.csproj" />
+    <ProjectReference Include="..\webApi.Services\webApi.Services.csproj" />
+    <ProjectReference Include="..\webApi.Data\webApi.Data.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>webApi.Api</RootNamespace>
+  </PropertyGroup>
+
+
+</Project>
