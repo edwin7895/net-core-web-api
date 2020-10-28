@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Cre5vxo0UzC5FMrvrxJ5Zti41mxS6TQ1CjtjVQt4diFVhYy5JZG3hAtqSxsolHa+k9DvwXRGHBFnNL4zGBgUhA==",
+  "dgSpecHash": "oWjuM9eKJHGJQtlhO/MUgM5oaKEFW2W3OGRhxvAtUqthLF5eurXqnmHtTHKuwRIJ3XHxmAb+CBF3G2YJHQELYQ==",
   "success": true,
-  "projectFilePath": "/Users/miguelangelmejiaquiroga/Development/webApi/webApi.Api/webApi.Api.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/miguelangelmejiaquiroga/Development/net-core/webApi/webApi.Api/webApi.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/miguelangelmejiaquiroga/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
   "logs": []
 }

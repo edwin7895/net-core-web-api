@@ -273,11 +273,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/miguelangelmejiaquiroga/Development/webApi/webApi.Core/webApi.Core.csproj",
+      "projectUniqueName": "/Users/miguelangelmejiaquiroga/Development/net-core/webApi/webApi.Core/webApi.Core.csproj",
       "projectName": "webApi.Core",
-      "projectPath": "/Users/miguelangelmejiaquiroga/Development/webApi/webApi.Core/webApi.Core.csproj",
+      "projectPath": "/Users/miguelangelmejiaquiroga/Development/net-core/webApi/webApi.Core/webApi.Core.csproj",
       "packagesPath": "/Users/miguelangelmejiaquiroga/.nuget/packages/",
-      "outputPath": "/Users/miguelangelmejiaquiroga/Development/webApi/webApi.Core/obj/",
+      "outputPath": "/Users/miguelangelmejiaquiroga/Development/net-core/webApi/webApi.Core/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "krBBWajnk6FCYvr/vv0ZlGXre4Jg+6ZBrLNtyHVjRabRvaTfiErUG9U7nXOybtL4AKq+MJnR40h4IdX7Fg0ozQ==",
+  "dgSpecHash": "gJXQkAAGUVR8dpQhoVkPa+N0Hg+GkBzCilyVVCQ+xQaJ+MpIyuwk6r5t/Hz9EuaHFYKYhL+dlOUHtIRERSJG/w==",
   "success": true,
-  "projectFilePath": "/Users/miguelangelmejiaquiroga/Development/net-core/webApi/webApi.Core/webApi.Core.csproj",
+  "projectFilePath": "/Users/miguelangelmejiaquiroga/Development/net-core/webApi/webApi.Data/webApi.Data.csproj",
   "expectedPackageFiles": [
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
