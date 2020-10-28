@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\net-core-crud.Core\net-core-crud.Core.csproj" />
+    <ProjectReference Include="..\net-core-crud.Services\net-core-crud.Services.csproj" />
+    <ProjectReference Include="..\net-core-crud.Data\net-core-crud.Data.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>net_core_crud.Api</RootNamespace>
+  </PropertyGroup>
+
+
+</Project>
