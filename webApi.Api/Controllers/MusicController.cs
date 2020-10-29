@@ -19,11 +19,22 @@ namespace webApi.Api.Controllers
             this._musicService = musicService;
             this._mapper = mapper;
         }
-        [HttpGet("")]
-        public async Task<ActionResult<IEnumerable<MusicResource>>> GetAllMusics(){
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<MusicResource>>> GetAllMusics()
+        {
             var musics = await _musicService.GetAllWithArtist();
             var musicResources = _mapper.Map<IEnumerable<Music>, IEnumerable<MusicResource>>(musics);
             return Ok(musicResources);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<MusicResource>> CreateMusic([FromBody] SaveMusicResource saveMusicResource)
+        {
+            var musicToCreate = _mapper.Map<SaveMusicResource, Music>(saveMusicResource);
+            var newMusic = await _musicService.CreateMusic(musicToCreate);
+            var music = await _musicService.GetMusicById(newMusic.Id);
+            var musicResource = _mapper.Map<Music, MusicResource>(music);
+            return Ok(musicResource);
         }
     } 
 }

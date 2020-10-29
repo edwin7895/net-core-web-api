@@ -14,6 +14,9 @@ namespace webApi.Api.Mapping
             // From resource to domain
             CreateMap<MusicResource,Music>();
             CreateMap<ArtistResource,Artist>();
+
+            CreateMap<SaveMusicResource, Music>();
+            CreateMap<SaveArtistResource, Artist>();
         }
     }
 }
