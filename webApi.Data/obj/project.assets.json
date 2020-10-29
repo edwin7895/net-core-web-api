@@ -1581,7 +1581,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.9",
       "NETStandard.Library >= 2.0.3",
-      "System.Threading.Tasks.Extensions >= *",
+      "System.Threading.Tasks.Extensions >= 4.5.4",
       "webApi.Core >= 1.0.0"
     ]
   },
@@ -1650,7 +1650,7 @@
           },
           "System.Threading.Tasks.Extensions": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[4.5.4, )"
           }
         },
         "imports": [
