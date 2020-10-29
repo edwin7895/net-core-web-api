@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using webApi.Data;
+using webApi.Core;
+using Microsoft.EntityFrameworkCore;
 
 namespace webApi.Api
 {
@@ -26,6 +29,8 @@ namespace webApi.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<MyMusicDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("Default"),x => x.MigrationsAssembly("webApi.Data")));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
