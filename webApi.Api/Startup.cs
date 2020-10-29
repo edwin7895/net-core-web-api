@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +38,7 @@ namespace webApi.Api
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IMusicService, MusicService>();
             services.AddTransient<IArtistService, ArtistService>();
+            services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(options => 
                 {
                     options.SwaggerDoc("v1", new OpenApiInfo {
