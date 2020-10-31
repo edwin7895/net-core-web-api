@@ -16,16 +16,14 @@ namespace webApi.Services
 
         public async Task<Artist> CreateArtist(Artist newArtist)
         {
-            await _unitOfWork.Artists
-                .AddAsync(newArtist);
-            
+            await _unitOfWork.Artists.AddAsync(newArtist);
+            await _unitOfWork.CommitAsync();
             return newArtist;
         }
 
         public async Task DeleteArtist(Artist artist)
         {
             _unitOfWork.Artists.Remove(artist);
-
             await _unitOfWork.CommitAsync();
         }
 
@@ -42,7 +40,6 @@ namespace webApi.Services
         public async Task UpdateArtist(Artist artistToBeUpdated, Artist artist)
         {
             artistToBeUpdated.Name = artist.Name;
-
             await _unitOfWork.CommitAsync();
         }
     }
