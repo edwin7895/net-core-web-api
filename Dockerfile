@@ -1,6 +1,5 @@
 # Building Image
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-# Define parameter for secure pass certificate password on docker file
 ARG certPassword
 WORKDIR /app
 
@@ -19,7 +18,8 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 # Configure Self-signed Certificate
 RUN dotnet dev-certs https -ep app/out/cert.pfx -p ${certPassword}
-
+# Seed Database
+COPY ["webApi.Api/Sqllite.db","out/"]
 # Build runtime Image
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
