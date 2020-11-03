@@ -36,17 +36,23 @@ namespace webApi.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // Configure Database context
             services.AddDbContext<MyMusicDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("Default"),x => x.MigrationsAssembly("webApi.Data")));
+            // Configure dependency injection for Unit of Work
+            // and Logic services.
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IMusicService, MusicService>();
             services.AddTransient<IArtistService, ArtistService>();
+            // Configure autoMapper for resource-entity map
             services.AddAutoMapper(typeof(Startup));
+            // Add validations for all controllers
             services.AddMvc(options => {
                 options.Filters.Add(new ValidationFilter());
             }).AddFluentValidation(options =>
             {
                 options.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
+            // Configure swagger for API UI
             services.AddSwaggerGen(options => 
                 {
                     options.SwaggerDoc("v1", new OpenApiInfo {
@@ -54,6 +60,8 @@ namespace webApi.Api
                         Version = "v1"
                     });
                 });
+            // Add basic health checks
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,22 +71,20 @@ namespace webApi.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
             app.UseSwagger();
             app.UseSwaggerUI(c => {
                 c.RoutePrefix = "";
                 c.SwaggerEndpoint("/swagger/v1/swagger.json","My Music V1");
             });
+
         }
     }
 }
