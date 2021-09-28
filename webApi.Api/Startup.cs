@@ -56,7 +56,7 @@ namespace webApi.Api
             services.AddSwaggerGen(options => 
                 {
                     options.SwaggerDoc("v1", new OpenApiInfo {
-                        Title = "My Music",
+                        Title = "Edwin API V1",
                         Version = "v1"
                     });
                 });
