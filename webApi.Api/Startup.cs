@@ -56,7 +56,7 @@ namespace webApi.Api
             services.AddSwaggerGen(options => 
                 {
                     options.SwaggerDoc("v1", new OpenApiInfo {
-                        Title = "Edwin API Pipeline V2",
+                        Title = "Edwin API Pipeline V3",
                         Version = "v1"
                     });
                 });
